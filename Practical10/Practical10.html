@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practical 10</title>
+    <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .header {
+        width: 100%;
+        height: 75px;
+        background-color: #2f3640;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        /* transition: 0.8s; */
+      }
+      .header img {
+        width: 70px;
+        height: 70px;
+        margin: 6px 15px;
+      }
+      .header h1 {
+        color: white;
+      }
+      .content{
+          width: 100%;
+          margin-top: 70px;
+          /* padding: 20px; */
+          float: right;
+          transition: .7s;
+      }
+      .content img{
+          width: 100%;
+          max-width: 700px;
+          display: block;
+          margin: auto;
+      }
+      .content p{
+          text-align: justify;
+          margin: 22px;
+      }
+      .slidebar{
+          width: 20%;
+          height: 100%;
+          position: fixed;
+          top: 70px;
+          background-color: #353b48;
+          left: -100%;
+          transition: 0.9s;
+      }
+      .slidebar ul{
+          list-style: none;
+      }
+      .slidebar ul li{
+          border: 2px solid rgba(255, 255, 255, 0.1);
+      }
+      .slidebar ul li a{
+          display: block;
+          text-decoration: none;
+          color: white;
+          font-size: 20px;
+          font-family: Arial, Helvetica, sans-serif;
+          padding: 15px 25px;
+      }
+      .slidebar ul li a:hover{
+            border-left:10px solid white ;
+            transition: .4s;
+      }
+      a i{
+          margin-right: 15px ;
+      }
+      .social {
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          font-size: 40px;
+          margin-top: 295px;
+          border-top: 2px solid rgba(255, 255, 255, 0.1);
+      
+      }
+      .social a img{
+        filter: invert(100%);
+        width: 30px;
+        /* margin-top: 25px; */
+        /* margin: 12px 34px; */
+      }
+      .show-btn,.hide-btn{
+            font-size: 45px;
+            color: white;
+            position: fixed;
+            top: 10px;
+            left: 30px;
+            
+
+      }
+      #chk{
+          visibility: hidden;
+      }
+      .hide-btn{
+          opacity: 0;
+      }
+      #chk:checked~.slidebar{
+          left: 0;
+      }
+      #chk:checked~.show-btn{
+            opacity: 0;
+      }
+      #chk:checked~.hide-btn{
+          opacity: 1;
+      }
+      #chk:checked~.content{
+         width: 80%;
+      }
+      @media screen and (max-width:768px) {
+            .slidebar{
+                width: 100%;
+                text-align: center;
+            }
+            .header h1{
+                display: none;
+            }
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <img
+        src="https://i1.wp.com/fullstackitjm.com/wp-content/uploads/2017/12/cropped-fullstack-logo-full-colour-icon-only.png?fit=512%2C512&ssl=1"
+        alt=""
+      />
+      <h1>Full Stack</h1>
+    </div>
+    <input type="checkbox" name="" id="chk">
+    <label for="chk" class="show-btn">
+        <i class="material-icons">reorder</i>
+    </label>
+    <label for="chk" class="hide-btn">
+        <i class="material-icons">close</i>
+    </label>
+    <div class="content">
+      <img src="https://cdn-media-1.freecodecamp.org/images/0*TDuYHwIBvClPXrgk." alt="" />
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui sit fugit
+        doloremque rerum placeat, esse iure? Delectus eligendi placeat
+        obcaecati. Rem libero nisi facere reprehenderit blanditiis modi optio
+        soluta. Ut officiis libero earum reiciendis. Eaque aspernatur ipsa
+        quidem? Iste veritatis ut fugiat, cum suscipit iusto obcaecati non ipsum
+        mollitia omnis porro corrupti accusamus magnam laudantium minus
+        dignissimos alias, aliquam doloribus quos. Alias quo quae in qui
+        consequuntur dolore expedita, reprehenderit nesciunt eos exercitationem
+        veniam atque! Culpa, facere labore ducimus accusamus sunt autem
+        temporibus tenetur impedit, minima tempore magnam eligendi nesciunt
+        asperiores aliquid quia quisquam repellat fuga exercitationem doloribus.
+        Modi aut distinctio, tenetur labore enim tempora veritatis a aspernatur
+        perferendis, delectus illo autem sit voluptatibus, assumenda dolor eius
+        repellat magnam placeat possimus vel voluptates. Fugit nobis optio,
+        sequi ipsum praesentium sed id exercitationem rerum sunt cum, a nisi
+        iure, itaque provident. Quia sunt repellendus obcaecati natus molestiae
+        voluptates quas maxime odio quisquam in amet qui ea modi quos maiores
+        commodi esse voluptas saepe, ipsam numquam. Unde, possimus
+        reprehenderit. Tenetur velit, atque quisquam voluptate inventore
+        voluptatem expedita distinctio consectetur dolorem quaerat odit dolore
+        quo enim, ipsum, voluptatum pariatur veritatis quis architecto! Nemo
+        debitis esse ipsam quia ut asperiores qui sapiente. Voluptatem, veniam
+        delectus doloribus porro, officiis assumenda quasi perspiciatis aperiam,
+        officia consequuntur maxime voluptate odio reprehenderit. Ipsam error,
+        tempore a, omnis beatae neque perspiciatis voluptatem illo enim officiis
+        quidem praesentium nihil porro quis explicabo asperiores inventore
+        ducimus accusantium sint repellendus atque sequi dolor, sunt tenetur.
+        Incidunt reprehenderit ullam velit animi similique, dicta ipsam
+        reiciendis ab rem quam, iusto porro est ducimus tenetur voluptas atque
+        debitis sint qui quia repellendus sed. Inventore id labore aperiam sequi
+        ea! Numquam ea deleniti itaque repudiandae nihil, et magnam, architecto
+        ex atque accusantium quisquam qui quam quasi non? Esse dolores non
+        pariatur ea error aspernatur iste ex eligendi voluptatem eius illo,
+        voluptates laborum ipsum reprehenderit ipsa magnam voluptatibus ratione
+        temporibus optio cupiditate, debitis sapiente sequi aliquam corporis.
+        Odio quia reiciendis ducimus! Dolorem aliquid eos consequatur expedita
+        natus optio rem libero, ut at, porro nostrum assumenda perspiciatis
+        autem? Inventore adipisci eum magni consequatur est, nobis deleniti
+        reprehenderit esse, culpa omnis quia eos id assumenda deserunt quidem
+        dolor debitis rerum sunt? Dignissimos non sint necessitatibus deleniti,
+        mollitia ut a quis dolore facere odit harum neque aperiam magnam nam
+        totam itaque minus rerum amet beatae blanditiis perferendis temporibus!
+        Officiis, beatae exercitationem ratione expedita vitae, ullam
+        accusantium eum aut quo tempore voluptas atque nam corporis alias nulla
+        minima nisi? Labore tempore quos doloremque harum obcaecati totam unde
+        quam similique facere? Magni deleniti quidem voluptatem consequatur,
+        quasi sint aliquam necessitatibus, qui, magnam ab consequuntur adipisci
+        omnis quam a! Nulla voluptatum adipisci, unde maiores labore quis ut
+        rerum sed culpa at exercitationem, ducimus voluptatem accusamus, illum
+        quo rem accusantium a mollitia? Necessitatibus alias ullam totam
+        aliquam! Vero, eum! Quos iure, atque eligendi, ratione ex ducimus ad
+        dignissimos consequatur dicta dolorem excepturi cumque, maxime
+        repellendus. Dicta explicabo unde similique quasi voluptatum hic et
+        labore, voluptatem voluptas amet expedita ducimus harum pariatur id
+        saepe repellendus.
+      </p>
+    </div>
+    <div class="slidebar">
+        <ul>
+            <li><a href="#"> <i class="material-icons">home</i><span>Home</span></a></li>
+            <li><a href="#"> <i class="material-icons">toc</i><span>ABOUT US</span></a></li>
+            <li><a href="#"> <i class="material-icons">task</i><span>SERVICES</span></a></li>
+            <li><a href="#"> <i class="material-icons">rss_feed</i><span>BLOG</span></a></li>
+            <li><a href="#"> <i class="material-icons">contact_mail</i><span>CONTACT</span></a></li>
+        </ul>
+        <div class="social">
+            <a href="#"><img src="../assets/facebook (1).png" alt=""></a>
+            <a href="#"><img src="../assets/youtube (1).png" alt=""></a>
+            </a><a href="#"><img src="../assets/instagram.png" alt=""></a>
+        </div>
+    </div>
+  </body>
+</html>
