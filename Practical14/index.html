@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css">
+    <title>Practical 14</title>
+
+</head>
+
+<body>
+    <h1>COUNTER</h1>
+
+    <div="container">
+        <button class="inc" onclick="increment()">+</button>
+        <h2 id="counting"></h2>
+        <button id="decc" class="dec" onclick="decrement()">-</button>
+    </div>
+
+    <script>
+        var data = 0;
+        var bt = document.getElementById("decc");
+        bt.disabled = true;
+        document.getElementById("counting").innerText = data;
+        function increment() {
+            var bt = document.getElementById("decc");
+            bt.disabled = false;
+            data = data + 1;
+            document.getElementById("counting").innerText = data;
+        }
+        function decrement() {
+            var bt = document.getElementById("decc");
+            data = data - 1;
+            document.getElementById("counting").innerText = data;
+            if (data <= 0) {
+                bt.disabled = true;
+            }
+        }
+    </script>
+</body>
+
+</html>
